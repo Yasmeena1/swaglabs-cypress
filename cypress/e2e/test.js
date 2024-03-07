@@ -1,4 +1,4 @@
-describe('to test login', () => {
+describe('', () => {
     it.skip('to test the random username', () => {
 
         cy.visit("https://www.saucedemo.com/v1/index.html")
@@ -21,18 +21,7 @@ describe('to test login', () => {
         }
 
     });
-    it.skip('to add all items to the cart',()=> {
-        cy.visit("https://www.saucedemo.com/v1/index.html")
-        cy.get('[data-test="username"]').type("standard_user")
-        cy.get('[data-test="password"]').type("secret_sauce")
-        cy.get('#login-button').click()
-        let expectionitemes = 6;
-        for (let i = 0; i < expectionitemes; i++) {
-            let myarray = cy.get('div[class="inventory_container"]').find('.btn_inventory').eq(i).click()
-        }
-        cy.get('#shopping_cart_container').click()
-
-    });
+   
 it.skip('to handle dropdown', () => {
     cy.visit("https://www.saucedemo.com/v1/index.html")
     cy.get('[data-test="username"]').type("standard_user")
@@ -103,7 +92,7 @@ it.skip('to handle dropdown', () => {
 
         
     });
-    it.only('to remove all items from the cart ', () => {
+    it.only('to remove items from the cart ', () => {
         cy.visit("https://www.saucedemo.com/v1/index.html")
         cy.get('[data-test="username"]').type("problem_user")
         cy.get('[data-test="password"]').type("secret_sauce")
